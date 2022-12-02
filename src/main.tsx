@@ -1,11 +1,14 @@
-import React from 'react'
+import { NextUIProvider } from '@nextui-org/react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 
-import App from './App'
-import './index.css'
+import { App } from 'App'
+import { darkTheme } from 'styles/theme'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <NextUIProvider theme={darkTheme}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </NextUIProvider>,
 )
